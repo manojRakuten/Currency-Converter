@@ -9,11 +9,6 @@ A SwiftUI based application to convert currency.
 - [@Manoj](https://github.com/manojRakuten)
 
 
-## Screenshots
-
-![App Screenshot](https://drive.google.com/file/d/1BIBnkLD4LE0Jvr-g8Vn0b5Al77nAzQar/view?usp=share_link)
-![App Screenshot](https://drive.google.com/file/d/1BIBnkLD4LE0Jvr-g8Vn0b5Al77nAzQar/view?usp=share_link)
-
 ## Features
 
 - Live conversion if currency updated from Picker
@@ -30,12 +25,17 @@ User can see the reset button once he/she successfully got the the result once. 
 The input form is properly valdated. User will not able to click on convert unless he enter some value to amount.
 
 #### Custom Loader
-User can change the loader and background color according to one's requirement.
-``LoaderView(color: .black, bgColor: .yellow)``
+User can change the loader and background color according to one's requirement.\
+``CustomLoader(color: .black, background: .black, size: .small)``
+
+
+## Screenshots
+<a href="url"><img src="https://user-images.githubusercontent.com/70250603/204080814-0599ce18-07d9-4c2a-b431-d2b03d9fdfd7.png" align="left" height="600" width="300" ></a>
+<a href="url"><img src="https://user-images.githubusercontent.com/70250603/204080828-43dff9f1-8ec2-4867-af66-6ecd667873f8.png" align="centre" height="600" width="300" ></a>
+
+
 ## Demo
-
-Insert gif or link to demo
-
+https://user-images.githubusercontent.com/70250603/204080935-e81b9d2a-e592-4778-9a97-ef364856d215.mov
 
 ## API Reference
 
@@ -65,7 +65,7 @@ Insert gif or link to demo
 
 **Client:** MVVM, Clean Architecture
 #### MVVM:
-![App Screenshot](https://drive.google.com/file/d/1BIBnkLD4LE0Jvr-g8Vn0b5Al77nAzQar/view?usp=share_link)
+[Screenshot 2022-11-26 at 2 32 45 PM](https://user-images.githubusercontent.com/70250603/204081020-a45f95b4-4d61-4ac7-ba44-58cbd75ea637.png)
 
 - MVVM includes four major components, model, view, view model, and controller.
 - The primary goal to make project easy to understand for anyone, so that any new developer can understand my structure and can work on it with ease.
@@ -103,5 +103,4 @@ Contains All Helper classes like Constant, Extensions, Localization
 
 For support, reachout to me on  
 - [Mail](mailto:manoj.rana@rakuten.com)
-- [Mobile](tel:+919692717907)
 
