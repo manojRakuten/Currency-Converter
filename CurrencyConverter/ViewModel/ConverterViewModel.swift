@@ -57,5 +57,5 @@ class ConverterViewModel {
 }
 
 enum AlertType {
-    case sameCurrency, emptyAmount, apiFailed
+    case emptyAmount, apiFailed
 }

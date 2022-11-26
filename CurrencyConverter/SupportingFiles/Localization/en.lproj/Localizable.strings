@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  CurrencyConverter
+
+  Created by Rana, Manoj on 26/11/22.
+  
+*/
+"page_title" = "Currency Converter";
+"page_desc" = "Check the value in other currencies with ease";
+"from_title" = "From";
+"to_title" = "To";
+"amount_placeholder" = "Enter an amount";
+"reset_button_title" = "Reset";
+"convert_button_title" = "Convert";
+"convert_result_title" = "Conversion Result -";
+"done" = "Done";
+"conversion_rate" = "Conversion Rate: ";
+"last_update_time" = "Last Updated On: ";
+"details" = "Details";
+"terms" = "Terms of use";
+"documentation" = "Documentation";
+"readMe" = "Read Me";
+"alert_title" = "Error";
+"alert_ok" = "OK";
+"alert_amountEmpty" = "Please Enter an amount. Amount can't be Empty";
+"alert_api" = "Something went wrong";

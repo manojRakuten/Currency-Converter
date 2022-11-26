@@ -5,3 +5,22 @@
   Created by Rana, Manoj on 26/11/22.
   
 */
+"page_title" = "Penukar mata wang";
+"page_desc" = "Semak nilai dalam mata wang lain dengan mudah";
+"from_title" = "daripada";
+"to_title" = "Kepada";
+"amount_placeholder" = "Masukkan jumlah";
+"reset_button_title" = "Tetapkan semula";
+"convert_button_title" = "Tukar";
+"convert_result_title" = "Keputusan Penukaran -";
+"done" = "Selesai";
+"conversion_rate" = "Kadar penukaran: ";
+"last_update_time" = "Kemas Kini Terakhir Pada: ";
+"details" = "Butiran";
+"alert_api" = "Sesuatu telah berlaku";
+"terms" = "Syarat penggunaan";
+"documentation" = "Dokumentasi";
+"readMe" = "Baca saya";
+"alert_title" = "ralat";
+"alert_amountEmpty" = "Sila Masukkan amaun Jumlah tidak boleh Kosong";
+"alert_ok" = "okey";

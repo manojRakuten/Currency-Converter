@@ -37,7 +37,6 @@ struct ConversionView: View {
                                         alertType = validationError
                                         showAlert = true
                                     } else {
-                                        print("Show_Loader")
                                         isLoading = true
                                         viewModel.fetchConversionResult(from: currencyCodes[newValue], to: currencyCodes[toCurrencySelected], amount: amount, completion: { error in
                                             isLoading = false
@@ -82,7 +81,7 @@ struct ConversionView: View {
                         } header: {
                             Text(Constant.Strings.toPickerHeader)
                         }
-                        
+
                         Section {
                             TextField(Constant.Strings.amountPlaceholder, text: $amount)
                                 .keyboardType(.decimalPad)
@@ -103,16 +102,16 @@ struct ConversionView: View {
                             Section {
                                 Text(resultAmount)
                             } header: {
-                                Text("\(Constant.Strings.convertResultTitle)\(!currencyNames.isEmpty ? "\(currencyNames[toCurrencySelected])": .empty)")
+                                Text("\(Constant.Strings.convertResultTitle) \(!currencyNames.isEmpty ? "\(currencyNames[toCurrencySelected])": .empty)")
                             }
 
                             Section {
                                 VStack(alignment:.leading){
-                                        Text("Last updated on: \(Date.getFormattedDate(string: viewModel.conversionResult?.time_last_update_utc ?? .empty))")
-                                    Text("Conversion Rate: \(viewModel.conversionResult?.conversion_rate ?? 0.0)")
+                                    Text("\(Constant.Strings.lastUpdateTime)\(Date.getFormattedDate(string: viewModel.conversionResult?.time_last_update_utc ?? .empty))")
+                                    Text("\(Constant.Strings.conversionRate)\(String(format: "%.2f", viewModel.conversionResult?.conversion_rate ?? 0.0))")
                                 }
                             } header: {
-                                Text("Details")
+                                Text(Constant.Strings.detailsHeader)
                             }
                         }
                     }
@@ -168,11 +167,11 @@ struct ConversionView: View {
                     if let tnc = URL(string: viewModel.availableCurrency?.terms_of_use ?? .empty), let documentation = URL(string: viewModel.availableCurrency?.documentation ?? .empty){
                         HStack {
                             Link(destination: tnc, label: {
-                                Text("Terms of use")
+                                Text(Constant.Strings.termsOfUse)
                             })
                             Spacer()
                             Link(destination: documentation, label: {
-                                Text("Documentation")
+                                Text(Constant.Strings.documentation)
                             })
                         }.padding()
                     }
@@ -204,8 +203,6 @@ struct ConversionView: View {
             .alert(isPresented: $showAlert) {
                 var description: String = .empty
                 switch alertType {
-                case .sameCurrency:
-                    description = Constant.AlertValues.sameCurrency
                 case .emptyAmount:
                     description = Constant.AlertValues.amountEmpty
                 case .apiFailed:
@@ -219,13 +216,11 @@ struct ConversionView: View {
     }
 
     func updateResultData() {
-        resultAmount = "\(viewModel.conversionResult?.conversion_result ?? 0.0)"
+        resultAmount = "\(String(format: "%.2f", viewModel.conversionResult?.conversion_result ?? 0.0))"
         lastUpdatedTime = "\(Date.getFormattedDate(string: viewModel.conversionResult?.time_last_update_utc ?? .empty))"
     }
     
     func resetData() {
-        fromCurrencySelected = 0
-        toCurrencySelected = 1
         amount = .empty
     }
 }
