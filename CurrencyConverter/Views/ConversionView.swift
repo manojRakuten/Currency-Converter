@@ -186,7 +186,6 @@ struct ConversionView: View {
                 }
             }
             .onAppear {
-                isConversionSuccessful = !amount.isEmpty
                 isLoading = true
                 viewModel.getAvailableCurrencies(completion: { codes, names, error in
                     isLoading = false

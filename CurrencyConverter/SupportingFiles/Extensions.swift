@@ -7,25 +7,27 @@
 
 import Foundation
 import SwiftUI
+
 extension String {
     static let empty = ""
 }
 
-extension Color {
-    static let textFieldBackground = Color("textFieldBackground")
-    static let errorBackground = Color("error")
-}
-
 extension Date {
-    static func getFormattedDate(string: String) -> String{
+    static func getFormattedDate(string: String) -> String {
         let dateFormatterGet = DateFormatter()
+        dateFormatterGet.locale = Locale(identifier: "en_US_POSIX")
         dateFormatterGet.dateFormat = "E, d MMM yyyy HH:mm:ss Z"
         
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "E, d MMM yyyy"
+        var date: Date!
         
-        let date: Date? = dateFormatterGet.date(from: string)
-        print("Date",dateFormatterPrint.string(from: date!))
-        return dateFormatterPrint.string(from: date!);
+        if string.isEmpty {
+            date = Date()
+        } else if let _date = dateFormatterGet.date(from: string) {
+            date = _date
+        } else {
+            return string
+        }
+        dateFormatterGet.dateFormat = "MMM d, yyyy"
+        return dateFormatterGet.string(from: date)
     }
 }
