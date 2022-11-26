@@ -34,6 +34,7 @@ User can run the app in local "Malay" Language by going to setting and change iP
 
 
 ## Screenshots
+
 <a href="url"><img src="https://user-images.githubusercontent.com/70250603/204080814-0599ce18-07d9-4c2a-b431-d2b03d9fdfd7.png" align="left" height="600" width="300" ></a>
 <a href="url"><img src="https://user-images.githubusercontent.com/70250603/204080828-43dff9f1-8ec2-4867-af66-6ecd667873f8.png" align="centre" height="600" width="300" ></a>
 
