@@ -14,6 +14,7 @@ A SwiftUI based application to convert currency.
 - Live conversion if currency updated from Picker
 - Reset Amount
 - Custom SwiftUI Loader (Can be used separately)
+- Localizations for Malay Language
 
 #### Live conversion
 If user already checked the result using one currency, If he/she wants to change the currency, then he/she doesn't has to press the convert again the conversion valuue will be populated autometically according to the new values choosen.
@@ -27,6 +28,9 @@ The input form is properly valdated. User will not able to click on convert unle
 #### Custom Loader
 User can change the loader and background color according to one's requirement.\
 ``CustomLoader(color: .black, background: .black, size: .small)``
+
+#### Localization
+User can run the app in local "Malay" Language by going to setting and change iPhone language to Malay
 
 
 ## Screenshots
