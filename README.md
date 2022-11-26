@@ -34,12 +34,14 @@ User can run the app in local "Malay" Language by going to setting and change iP
 
 
 ## Screenshots
-<a href="url"><img src="https://user-images.githubusercontent.com/70250603/204080814-0599ce18-07d9-4c2a-b431-d2b03d9fdfd7.png" align="left" height="600" width="300" ></a>
-<a href="url"><img src="https://user-images.githubusercontent.com/70250603/204080828-43dff9f1-8ec2-4867-af66-6ecd667873f8.png" align="centre" height="600" width="300" ></a>
+
+<a href="url"><img src="https://user-images.githubusercontent.com/70250603/204105443-f97f6c5a-0435-4300-a1dc-8eb00f7ec0ca.png" align="left" height="600" width="300" ></a>
+<a href="url"><img src="https://user-images.githubusercontent.com/70250603/204105447-09984eef-4a0e-4a18-9b74-6878c5f1a1fa.png" align="centre" height="600" width="300" ></a>
 
 
 ## Demo
-https://user-images.githubusercontent.com/70250603/204080935-e81b9d2a-e592-4778-9a97-ef364856d215.mov
+https://user-images.githubusercontent.com/70250603/204095513-a2ecf352-ca96-42af-923d-0782fc4be82b.mov
+
 
 ## API Reference
 
