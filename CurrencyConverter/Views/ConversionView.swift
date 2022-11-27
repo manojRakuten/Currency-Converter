@@ -187,14 +187,14 @@ struct ConversionView: View {
             }
             .onAppear {
                 isLoading = true
-                viewModel.getAvailableCurrencies(completion: { codes, names, error in
+                viewModel.getAvailableCurrencies(completion: { responseObj, error in
                     isLoading = false
                     if error != nil {
                         showAlert = true
                         alertType = .apiFailed
                     }
-                    currencyCodes = codes
-                    currencyNames = names
+                    currencyCodes = responseObj?.currencyCodes ?? []
+                    currencyNames = responseObj?.currencyNames ?? []
                 })
             }
             .navigationBarTitle(Constant.Strings.pageTitle)

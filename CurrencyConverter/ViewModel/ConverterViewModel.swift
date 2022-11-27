@@ -7,27 +7,23 @@
 
 import Foundation
 
+
+
 class ConverterViewModel {
-    var conversionResult: ConvertedResponse?
-    var availableCurrency: AvailableCodesResponse?
+    var conversionResult: ConversionResult?
+    var availableCurrency: SupportedCodes?
     
     //MARK: - API Methods
-    func getAvailableCurrencies(completion: @escaping ([String], [String], ServiceError?) -> ()) {
-            let request = AvailableCurrency()
+    func getAvailableCurrencies(completion: @escaping (SupportedCodes?, ServiceError?) -> ()) {
+            let request = SupportedCurrency()
             let apiLoader = APILoader(apiHandler: request)
         apiLoader.loadAPIRequest(params: [:]) { [weak self] (model, error) in
                 guard let self = self else { return }
                 if let _ = error {
-                    completion([], [], error)
+                    completion(nil, error)
                 } else {
                     self.availableCurrency = model
-                    guard let codes = model?.supported_codes else {
-                        return
-                    }
-                    let flattenArray = codes.flatMap {$0}
-                    let currencyCodes = stride(from: 0, to: flattenArray.count - 1, by: 2).map { flattenArray[$0] }
-                    let currencyNames = stride(from: 1, to: flattenArray.count, by: 2).map { flattenArray[$0] }
-                    completion(currencyCodes, currencyNames, nil)
+                    completion(model, nil)
                 }
             }
     }
@@ -53,6 +49,7 @@ class ConverterViewModel {
         } else {
             return nil
         }
+        //More Validations can be added later
     }
 }
 

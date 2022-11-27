@@ -24,7 +24,7 @@ struct CurrencyConversion: APIHandler {
         return nil
     }
     
-    func parseResponse(data: Data, response: HTTPURLResponse) throws -> ConvertedResponse {
+    func parseResponse(data: Data, response: HTTPURLResponse) throws -> ConversionResult {
         return try defaultParseResponse(data: data,response: response)
     }
 }
