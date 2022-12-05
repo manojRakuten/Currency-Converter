@@ -44,6 +44,7 @@ https://user-images.githubusercontent.com/70250603/204095513-a2ecf352-ca96-42af-
 
 
 ## API Reference
+#### Please create a new API key from [Exchangerate Api](https://www.exchangerate-api.com) and replace in **SupportingFiles/Constants.swift**
 
 #### Get all supported currency codes
 
